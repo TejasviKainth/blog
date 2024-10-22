@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+            cursor: pointer;
+        }
+
+        h1:hover {
+            background-color: #f1f1ee;
+        }
+
+        .navbar {
+            background-color: rgb(254, 252, 252);
+            border-radius: 35px;
+            padding: 10px;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+            list-style: none;
+        }
+
+        .navbar li {
+            margin: 0 10px;
+        }
+
+        .navbar li a {
+            font-size: 22px;
+            font-weight: bold;
+            font-family: Lobster, cursive;
+            color: rgb(20, 21, 21);
+            text-decoration: underline;
+            padding: 5px;
+        }
+
+        .navbar li a:hover {
+            color: rgb(239, 81, 81);
+        }
+
+        .search {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .search input {
+            padding: 8px;
+            background-color: #f9f9f8;
+            border: 2px solid #291f1e;
+            border-radius: 5px;
+        }
+
+        .search input:hover {
+            background-color: rgb(0, 255, 64);
+        }
+
+        #img1 {
+            border-radius: 50%;
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+        }
+
+        #head {
+            background-color: rgba(137, 241, 241, 0.293);
+            font-size: larger;
+            font-weight: bolder;
+            font-style: oblique;
+        }
+
+        .para {
+            font-style: oblique;
+            font-size: 30px;
+        }
+
+        .commentInput {
+            width: 100%;
+            max-width: 350px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-width: 3px;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 150px;
+            font-size: 15px;
+            background-color: #eaede2;
+            border-radius: 10px;
+            border-width: 3px;
+            margin: 10px 0;
+        }
+
+        .btn:hover {
+            background-color: aqua;
+        }
+
+        .comments {
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar li {
+                margin: 10px 0;
+            }
+
+            .search {
+                justify-content: center;
+                margin: 10px 0;
+            }
+
+            .para {
+                font-size: 24px;
+                margin: 10px;
+            }
+
+            .commentInput, .btn {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar ul {
+                flex-direction: column;
+            }
+
+            .navbar li a {
+                font-size: 18px;
+            }
+
+            .search input {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .para {
+                font-size: 18px;
+                margin: 10px;
+            }
+
+            .commentInput, .btn {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search Your Website">
+        </div>
+    </div>
+
+    <div>
+        <img src="1111.png" alt="img">
+    </div>
+
+    <div id="head">
+        <marquee>
+            <h2>Post your Blog and your Comments</h2>
+        </marquee>
+    </div><br><br>
+
+    <div>
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S8015d973c0a24d8fb200dc4f9fe76efdS/Colorful-Neon-Paint-Shirt-Man-Pretty-Splatter-Print-Casual-Shirts-Autumn-Printed-Blouses-Long-Sleeve-Novelty.jpg_640x640Q90.jpg_.webp" alt="img" id="img1">
+        <p class="para">A beautiful shirt with different neon colours, handmade fabric made of natural fibres (cotton) and synthetic fibres (polyester) and it is round from the bottom.</p>
+        <textarea class="commentInput" placeholder="Leave a comment" rows="4" cols="35"></textarea>
+        <button class="btn" onclick="PostComment(this)">Post Comment</button>
+        <div class="comments">
+            <h3>COMMENTS-</h3>
+            <div class="commentSection"></div>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <img src="https://www.prada.com/content/dam/pradabkg_products/1/134/134709/1509F0304/134709_1509_F0304_S_OOO_MDF.jpg" alt="img" id="img1">
+        <p class="para">This cotton fleece sweatshirt features an oversized silhouette with ribbed knit crew neck, cuffs, and hem.</p>
+        <textarea class="commentInput" placeholder="Leave a comment" rows="4" cols="35"></textarea>
+        <button class="btn" onclick="PostComment(this)">Post Comment</button>
+        <div class="comments">
+            <h3>COMMENTS-</h3>
+            <div class="commentSection"></div>
+        </div>
+    </div>
+
+    <script>
+        function PostComment(button) {
+            var parentDiv = button.parentElement;
+            var commentInput = parentDiv.querySelector('.commentInput').value;
+            var commentSection = parentDiv.querySelector('.commentSection');
+
+            if (commentInput.trim() !== "") {
+                var newComment = document.createElement("div");
+                newComment.classList.add("comment");
+                newComment.innerText = commentInput;
+                commentSection.appendChild(newComment);
+                parentDiv.querySelector('.commentInput').value = "";
+            } else {
+                alert("Please write a comment");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

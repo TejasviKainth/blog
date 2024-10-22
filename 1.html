@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <style>
+        h1 {
+            text-align: center;
+            color: blue;
+            cursor: pointer;
+        }
+
+        h1:hover {
+            background-color: #f1f1ee;
+        }
+
+        .navbar {
+            background-color: rgb(254, 252, 252);
+            /* border:5px solid rgb(148, 2, 2);  */
+            border-radius: 35px;
+        }
+
+        .navbar ul {
+            overflow: auto;
+            list-style: none;
+        }
+
+        .navbar li a {
+            float: left;
+            padding: 2px 42px 3px 1px;
+            margin: 1px 3px 0px -18px;
+            font-size: 22px;
+            font-weight: bold;
+            font-family: lobster;
+            color: rgb(20, 21, 21);
+            text-decoration: underline;
+
+        }
+
+        .navbar li a:hover {
+            color: rgb(239, 81, 81);
+        }
+
+        .search {
+            float: right;
+            margin: -47px 35px 0px 0px;
+            border: 2px solid #291f1e;
+            border-radius: 5px;
+        }
+
+        .search input {
+            padding: 4px 3px 5px 24px;
+            background-color: #f9f9f8;
+        }
+
+        .search input:hover {
+            background-color: rgb(0, 255, 64);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    #img1{
+        border-radius: 50%;
+        max-width: 100%; /* Responsive image */
+    }
+        #head {
+            background-color: rgba(137, 241, 241, 0.293);
+            font-size: larger;
+            font-weight: bolder;
+            font-style: oblique;
+        }
+
+        .para {
+            margin: -308px 49px 36px 421px;
+            font-style: oblique;
+            font-size: 30px;
+            /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+        }
+
+        .commentInput {
+            margin: -17px 69px 54px 418px;
+            border-radius: 10px;
+            border-width: 3px;
+        }
+
+        .btn {
+            margin: -9px 69px 54px -353px;
+            font-size: 15px;
+            background-color: #eaede2;
+            border-radius: 10px;
+            border-width: 3px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .btn:hover {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+  
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search Your Website">
+        </div>
+    </div>
+
+    <div>
+        <img src="1111.png" alt="img">
+    </div>
+
+    <div id="head">
+        <marquee>
+            <h2>Post your Blog and your Comments</h2>
+        </marquee>
+    </div><br><br>
+
+    <div>
+        <img src="ff1.jpg" alt="img" width="350px" height="352px" id="img1">
+        <p class="para">A beautiful shirt with different neon colour, handmade fabric made of natural fibres (cotton) and
+            synthetic fibre (polyester) and it is round from the bottom.</p>
+        <textarea class="commentInput" placeholder="Leave a comment " rows="4" cols="35"></textarea>
+        <button class="btn" onclick="PostComment(this)">Post Comment</button>
+    </div>
+    <div class="comments">
+        <h3>COMMENTS-</h3>
+        <div class="commentSection">
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <img src="https://www.prada.com/content/dam/pradabkg_products/1/134/134709/1509F0304/134709_1509_F0304_S_OOO_MDF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1200.1200.jpg"
+            alt="img" width="350px" height="352px" id="img1">
+        <p class="para">This cotton fleece sweatshirt features an oversized silhouette with ribbed knit crew neck, cuffs
+            and hem Oversized fit,
+            Long sleeves,
+            Ribbed knit crew neck,
+            Ribbed knit hem,
+            Fabric logo patch,
+            Conceptual triangle on the back and
+            Garment dyed </p>
+        <textarea class="commentInput" placeholder="Leave a comment " rows="4" cols="35"></textarea>
+        <button onclick="PostComment(this)" id="btn">Post Comment</button>
+    </div>
+    <div class="comments">
+        <h3>COMMENTS-</h3>
+        <div class="commentSection">
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <img src="https://www.prada.com/content/dam/pradabkg_products/U/UPW/UPW518/15Y0F0002/UPW518_15Y0_F0002_S_OOO_MDF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1200.1200.jpg"
+            alt="img" width="350px" height="352px" id="img1">
+        <p class="para">Inspired by the retro sportswear designs With quilted, padded lining Regular fit Snap closure
+            Ribbed knit collar Straight sleeve with ribbed knit cuff Wide welt pockets Ribbed knit hem Leather triangle
+            logo on the back Felt logo patches on the front and sleeves</p>
+        <textarea class="commentInput" placeholder="Leave a comment " rows="4" cols="35"></textarea>
+        <button onclick="PostComment(this)" class="btn">Post Comment</button>
+
+    </div>
+
+    <div class="comments">
+        <h3>COMMENTS-</h3>
+        <div class="commentSection">
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <img src="https://www.prada.com/content/dam/pradabkg_products/U/UCS/UCS406/13T9F0I65/UCS406_13T9_F0I65_S_212_MDF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1200.1200.jpg"
+            alt="img" width="350px" height="352px" id="img1">
+        <p class="para">Graphic contrasts brighten the Double Match silk twill shirt, creating a play of duality and
+            juxtaposition that is emblematic of the brand. The two diametrically opposed sides revolutionize the classic
+            short-sleeved silhouette with bowling collar.</p>
+        <textarea class="commentInput" placeholder="Leave a comment " rows="4" cols="35"></textarea>
+        <button onclick="PostComment(this)" id="btn">Post Comment</button>
+    </div>
+    <div class="comments">
+        <h3>COMMENTS-</h3>
+        <div class="commentSection">
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <img src="https://www.prada.com/content/dam/pradabkg_products/5/56A/56A155/15PFF0003/56A155_15PF_F0003_S_OOO_MDF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1200.1200.jpg"
+            alt="img" width="350px" height="352px" id="img1">
+        <p class="para">Eccentric volumes blending classic elegance and contemporary style define the silhouette of this
+            shearling caban jacket Unlined
+            Oversized fit
+            Center hook closure
+            Notch lapels
+            Straight sleeves
+            Patch pockets
+            With belt</p>
+        <textarea class="commentInput" placeholder="Leave a comment " rows="4" cols="35"></textarea>
+        <button onclick="PostComment(this)" class="btn">Post Comment</button>
+    </div>
+    <div class="comments">
+        <h3>COMMENTS-</h3>
+        <div class="commentSection">
+
+        </div>
+    </div>
+    <script>
+        function PostComment(button) {
+            var parentDiv = button.parentElement;
+            var commentInput = parentDiv.querySelector('.commentInput').value;
+            var commentSection = parentDiv.querySelector('.commentSection');
+
+            if (commentInput.trim() !== "") {
+                var newComment = document.createElement("div");
+                newComment.classList.add("comment");
+                newComment.innerText = commentInput;
+                commentSection.appendChild(newComment);
+                parentDiv.querySelector('.commentInput').value = "";
+            } else {
+                alert("Please write a comment");
+            }
+        }
+    </script>
+    
+    
+</body>
+
+</html>
